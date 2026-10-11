@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Lato:wght@400;700;900&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg-primary: #f5f2eb;
+    --bg-secondary: #ebe7de;
+    --bg-card: #fffdf8;
+    --bg-card-border: #ddd7ca;
+    --bg-card-hover-border: #b9b0a0;
+    --accent-red: #d85d48;
+    --accent-crimson: #b94c3c;
+    --accent-fire: #e47b55;
+    --accent-ember: #c77743;
+    --accent-gold: #c79b52;
+    --text-primary: #292823;
+    --text-secondary: #68645b;
+    --text-muted: #969084;
+
+    /* Mystic Violet/Purple Palette for AI features */
+    --violet-dark: #292823;
+    --violet-card: #fffdf8;
+    --violet-primary: #426b68;
+    --violet-glow: #6d9992;
+    --violet-light: #8bb2a8;
+    --violet-border: #bfd2cb;
+    --violet-border-hover: #7fa69d;
+
+    --font-heading: 'Manrope', sans-serif;
+    --font-subheading: 'Manrope', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+    --sidebar-width: 236px;
+    --topbar-height: 72px;
+    --shadow-sm: 0 2px 8px rgba(47, 42, 34, 0.06);
+    --shadow-md: 0 12px 28px rgba(47, 42, 34, 0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    background-image: linear-gradient(rgba(74, 68, 57, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(74, 68, 57, 0.035) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--text-primary);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Mythic Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #07080c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-red);
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-crimson);
+}
+
+/* Violet Scrollbar for Chat & Bot */
+.InterviewBotPage ::-webkit-scrollbar-thumb,
+.ChatAiPage ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #7c3aed, #c084fc);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+}
+
+button {
+    font-family: var(--font-body);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input, textarea, select {
+    font-family: var(--font-body);
+}
+
+::selection {
+    background-color: var(--accent-red);
+    color: #ffffff;
+}
+
+/* Keyframe Animations */
+@keyframes flamePulse {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(239, 68, 68, 0.3), inset 0 0 15px rgba(239, 68, 68, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(239, 68, 68, 0.6), inset 0 0 25px rgba(249, 115, 22, 0.2);
+    }
+}
+
+@keyframes violetPulse {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(168, 85, 247, 0.3), inset 0 0 12px rgba(124, 58, 237, 0.15);
+    }
+    50% {
+        box-shadow: 0 0 35px rgba(168, 85, 247, 0.7), inset 0 0 25px rgba(192, 132, 252, 0.3);
+    }
+}
+
+@keyframes floatGentle {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+body,
+input,
+textarea,
+select,
+button {
+    letter-spacing: 0;
+}
+
+:focus-visible {
+    outline: 3px solid rgba(66, 107, 104, 0.35);
+    outline-offset: 2px;
+}
+
+:is(.Home, .Profile, .ResumePage, .AIPage, .ResumeAnalysisPage, .InterviewBotPage, .ChatAiPage, .FlowchartPage) {
+    min-height: 100vh;
+    margin-left: var(--sidebar-width);
+    padding-top: var(--topbar-height);
+    background: transparent;
+}
+
+:is(.Home, .Profile, .ResumePage, .AIPage, .ResumeAnalysisPage, .InterviewBotPage, .ChatAiPage, .FlowchartPage) .Footer {
+    margin-left: 0;
+}
+
+h1, h2, h3, h4 {
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    letter-spacing: -0.035em;
+}
+
+::placeholder {
+    color: #aaa398;
+}
+
+body :is(.Home, .Profile, .ResumePage, .AIPage, .ResumeAnalysisPage, .InterviewBotPage, .ChatAiPage, .FlowchartPage) {
+    background: transparent;
+    color: var(--text-primary);
+}
+
+body :is(.Home h1, .Profile h1, .ResumePage h1, .AIPage h1, .ResumeAnalysisPage h1, .InterviewBotPage h1, .ChatAiPage h1, .FlowchartPage h1) {
+    color: var(--text-primary);
+    background: none;
+    -webkit-text-fill-color: initial;
+    text-transform: none;
+}
+
+body :is(input, textarea, select) {
+    color: var(--text-primary);
+    background: #fffdf8;
+    border: 1px solid var(--bg-card-border);
+    border-radius: 7px;
+}
+
+body :is(input, textarea, select):focus {
+    border-color: var(--violet-primary);
+    box-shadow: 0 0 0 3px rgba(66, 107, 104, .12);
+    outline: none;
+}
+
+body :is(.ResumeAnalysisContainer, .ChatAiContainer, .AnalysisResult, .ProfileCard, .upload-box, .FlowchartContainer) {
+    background: #fffdf8;
+    border: 1px solid var(--bg-card-border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+body :is(.ResumeAnalysisContainer, .ChatAiContainer, .FlowchartContainer) {
+    color: var(--text-secondary);
+}
+
+body :is(.ScoreCard, .AnalysisSection, .ChatAiResponse) {
+    background: var(--bg-secondary);
+    border-color: var(--bg-card-border);
+    box-shadow: none;
+}
+
+body :is(.ResumeSelector, .ScoreCard, .AnalysisSection, .ChatAiResponse) h2,
+body :is(.ResumeSelector, .ScoreCard, .AnalysisSection, .ChatAiResponse) h3,
+body :is(.ResumeSelector, .ScoreCard, .AnalysisSection, .ChatAiResponse) h4 {
+    color: var(--text-primary);
+    background: none;
+    -webkit-text-fill-color: initial;
+}
+
+body :is(.LoginPage, .SignUp) {
+    background-color: var(--bg-primary);
+    background-image: linear-gradient(135deg, rgba(216, 93, 72, .1), transparent 42%), linear-gradient(315deg, rgba(66, 107, 104, .1), transparent 45%);
+}
+
+body :is(.Login, .SignUp form) {
+    background: #fffdf8;
+    border: 1px solid var(--bg-card-border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+}
+
+body :is(.LoginTitle, .SignUp h1) {
+    color: var(--text-primary);
+    background: none;
+    -webkit-text-fill-color: initial;
+    text-transform: none;
+}
+
+body :is(.LoginForm input, .SignUp form input) { background: #f8f5ef; color: var(--text-primary); border-color: var(--bg-card-border); }
+body :is(.LoginForm button, .SignUp form button, .submit-btn, .ResumeSelector button) { background: var(--accent-red); border-radius: 7px; box-shadow: none; }
+body :is(.LoginForm button, .SignUp form button, .submit-btn, .ResumeSelector button):hover:not(:disabled) { background: var(--accent-crimson); box-shadow: none; transform: translateY(-1px); }
+body :is(.LoginError, .AnalysisError, .resume-message, .ChatAiError) { color: var(--accent-crimson); background: #f9e6df; border-color: #e9b4a7; border-radius: 7px; }
+
+:is(.About, .ContactPage, .Profile, .ResumePage, .AIPage, .ResumeAnalysisPage, .InterviewBotPage, .ChatAiPage, .FlowchartPage) {
+    --bg-primary: #321f29;
+    --bg-secondary: #402a34;
+    --bg-card: #49323c;
+    --bg-card-border: rgba(239, 196, 154, 0.22);
+    --accent-red: #e3a15c;
+    --accent-crimson: #c47b48;
+    --accent-fire: #e3a15c;
+    --accent-ember: #cb8750;
+    --accent-gold: #e3a15c;
+    --text-primary: #f6f0ec;
+    --text-secondary: #d4c5c5;
+    --text-muted: #ad989d;
+    --font-heading: 'Lato', sans-serif;
+    --font-subheading: 'Lato', sans-serif;
+    --font-body: 'Lato', sans-serif;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin-left: 0 !important;
+    padding-top: 76px;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-primary);
+    background: #321f29 !important;
+    background-image: none !important;
+    font-family: var(--font-body) !important;
+}
+
+:is(.About, .ContactPage, .Profile, .ResumePage, .AIPage, .ResumeAnalysisPage, .InterviewBotPage, .ChatAiPage, .FlowchartPage) * {
+    font-family: var(--font-body), sans-serif !important;
+}
+
+:is(.About, .ContactPage, .Profile, .ResumePage, .AIPage, .ResumeAnalysisPage, .InterviewBotPage, .ChatAiPage, .FlowchartPage) :is(h1, h2, h3, h4) {
+    color: var(--text-primary) !important;
+    background: none !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+
+:is(.AboutContent, .ContactContainer, .ProfileCard, .resume-container, .AIContainer, .AIResumeCard, .ResumeAnalysisContainer, .AnalysisResult, .InterviewBotContainer, .InterviewSelector, .InterviewChat, .ChatAiContainer, .ChatAiResponse, .FlowchartContainer) {
+    color: var(--text-secondary) !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+body:has(:is(.About, .ContactPage, .Profile, .ResumePage, .AIPage, .ResumeAnalysisPage, .InterviewBotPage, .ChatAiPage, .FlowchartPage)) :is(.NavBar, .AppSidebar, .Footer) {
+    background: #291821 !important;
+    border: 0 !important;
+    font-family: 'Lato', sans-serif !important;
+}
+
+body:has(:is(.About, .ContactPage, .Profile, .ResumePage, .AIPage, .ResumeAnalysisPage, .InterviewBotPage, .ChatAiPage, .FlowchartPage)) .NavBar {
+    border-bottom: 3px solid #e3a15c !important;
+}
+
+body:has(:is(.About, .ContactPage, .Profile, .ResumePage, .AIPage, .ResumeAnalysisPage, .InterviewBotPage, .ChatAiPage, .FlowchartPage)) .Footer {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+body:has(:is(.About, .ContactPage, .Profile, .ResumePage, .AIPage, .ResumeAnalysisPage, .InterviewBotPage, .ChatAiPage, .FlowchartPage)) :is(.NavBar, .AppSidebar, .Footer) * {
+    font-family: 'Lato', sans-serif !important;
+}
+
+body:has(:is(.About, .ContactPage, .Profile, .ResumePage, .AIPage, .ResumeAnalysisPage, .InterviewBotPage, .ChatAiPage, .FlowchartPage)) .BrandIcon {
+    color: #321f29;
+    background: #e3a15c;
+    box-shadow: none;
+}
+
+body:has(:is(.About, .ContactPage, .Profile, .ResumePage, .AIPage, .ResumeAnalysisPage, .InterviewBotPage, .ChatAiPage, .FlowchartPage)) :is(.SidebarLink.active, .NavBar .LogoutButton:hover) {
+    color: #f6f0ec;
+    background: rgba(227, 161, 92, 0.18);
+    box-shadow: inset 3px 0 #e3a15c;
+}
+
+@media (max-width: 760px) {
+    :is(.Home, .Profile, .ResumePage, .AIPage, .ResumeAnalysisPage, .InterviewBotPage, .ChatAiPage, .FlowchartPage) { margin-left: 0; }
+    body :is(.ResumeAnalysisContainer, .ChatAiContainer, .FlowchartContainer) { margin: 20px 14px; padding: 24px 18px; }
+}

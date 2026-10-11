@@ -1,0 +1,773 @@
+.SignUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px 16px 0;
+  box-sizing: border-box;
+  background: #f4f4f4;
+}
+
+
+/* =========================================================
+   AUTH PAGE
+   ========================================================= */
+
+.SignUp.auth-page {
+  min-height: 100vh;
+  padding: 24px 16px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  background-image: none;
+}
+
+
+/* =========================================================
+   MAIN AUTH CONTAINER (sized to match Login's AuthShell)
+   ========================================================= */
+
+.SignUp .AuthShell {
+  width: min(100%, 920px);
+  min-height: 560px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  box-shadow: 0 18px 35px rgba(45, 42, 38, 0.18);
+}
+
+
+/* =========================================================
+   LEFT SIGNUP PANEL
+   ========================================================= */
+
+.SignUpFormPanel {
+  min-width: 0;
+
+  padding: 48px 56px 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #ffffff;
+
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SIGNUP FORM
+   ========================================================= */
+
+.SignUpFormPanel form {
+  width: 100%;
+  max-width: none;
+
+  padding: 14px 18px 18px;
+  margin: 0;
+
+  background: transparent;
+
+  border: 0;
+  box-shadow: none;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+
+.SignUpFormPanel form::before {
+  display: none;
+}
+
+
+/* =========================================================
+   FORM INTRO
+   ========================================================= */
+
+.AuthIntro {
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+
+.AuthIntro h6 {
+  margin: 0 0 10px;
+
+  color: #8c9bb3;
+
+  font-family: var(--font-body, Arial, sans-serif);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   FORM LABELS
+   ========================================================= */
+
+
+.SignUpFormPanel form h6 {
+  margin: 0 0 6px;
+  padding: 0;
+
+  color: #625e59;
+
+  font-family: var(--font-body, Arial, sans-serif);
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0;
+
+  text-align: left;
+
+  text-transform: none;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   SPACE BETWEEN FORM FIELDS
+   ========================================================= */
+
+.SignUpFormPanel form h6:not(:first-child) {
+  margin-top: 10px;
+}
+
+
+/* =========================================================
+   EMAIL / USERNAME / PASSWORD INPUTS (sized to match Login's inputs)
+   ========================================================= */
+
+.SignUpFormPanel form input {
+  display: block;
+
+  width: 100%;
+  height: 44px;
+
+  margin: 0;
+
+  padding: 0 13px;
+
+  box-sizing: border-box;
+
+  background: #f8f6f2;
+
+  border: 1px solid #ddd7cd;
+
+  border-radius: 1px;
+
+  color: #282624;
+
+  font-family: var(--font-body, Arial, sans-serif);
+
+  font-size: 0.75rem;
+
+  font-weight: 400;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================================
+   INPUT PLACEHOLDER
+   ========================================================= */
+
+.SignUpFormPanel form input::placeholder {
+  color: #aaa59e;
+  opacity: 1;
+}
+
+
+/* =========================================================
+   INPUT HOVER
+   ========================================================= */
+
+.SignUpFormPanel form input:hover {
+  border-color: #cfc7bb;
+
+  background: #faf9f6;
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+   ========================================================= */
+
+
+
+.SignUpFormPanel form input:focus {
+  background: #ffffff;
+
+  border-color: #e56b60;
+
+  box-shadow: 0 0 0 3px rgba(229, 107, 96, 0.08);
+
+  outline: none;
+}
+/* =========================================================
+   SIGN UP BUTTON
+   ========================================================= */
+
+.SignUpFormPanel form button {
+  display: block;
+
+  width: 124px;
+  height: 36px;
+
+  margin: 14px auto 0;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 7px;
+
+  background: #df624f;
+
+  color: #ffffff;
+
+  font-family: var(--font-body, Arial, sans-serif);
+
+  font-size: 0.69rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  box-shadow: none;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================================
+   SIGN UP BUTTON HOVER
+   ========================================================= */
+
+.SignUpFormPanel form button:hover:not(:disabled) {
+  background: #d95545;
+
+  box-shadow: 0 5px 12px rgba(217, 85, 69, 0.18);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SIGN UP BUTTON ACTIVE
+   ========================================================= */
+
+.SignUpFormPanel form button:active:not(:disabled) {
+  transform: translateY(0);
+
+  box-shadow: none;
+}
+
+
+@media (max-width: 680px) {
+  .SignUp.auth-page {
+    padding: 18px 14px 0;
+  }
+
+  .SignUp .AuthShell {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    max-width: 430px;
+  }
+
+  .SignUpFormPanel {
+    padding: 42px 28px 34px;
+  }
+
+  .SignUp .AuthWelcomePanel {
+    min-height: 250px;
+    padding: 36px 28px;
+  }
+}
+
+
+/* =========================================================
+   DISABLED BUTTON
+   ========================================================= */
+
+.SignUpFormPanel form button:disabled {
+  background: #c9c5bf;
+
+  color: #ffffff;
+
+  box-shadow: none;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+   ========================================================= */
+
+.SignUpError {
+  width: 100%;
+  max-width: 300px;
+
+  margin: 12px auto 0;
+
+  padding: 9px 12px;
+
+  box-sizing: border-box;
+
+  color: #b94c3c;
+
+  background: #f9e6df;
+
+  border: 1px solid #e9b4a7;
+
+  border-radius: 7px;
+
+  font-size: 0.72rem;
+
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   LOGIN TEXT
+   ========================================================= */
+
+.SignUpLogin {
+  margin: 18px 0 0;
+
+  text-align: center;
+
+  color: #8997ad;
+
+  font-family: var(--font-body, Arial, sans-serif);
+
+  font-size: 0.84rem;
+
+  line-height: 1.4;
+}
+
+
+.SignUpLogin a {
+  color: #ed6258;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  margin-left: 5px;
+
+  transition: color 0.2s ease;
+}
+
+
+.SignUpLogin a:hover {
+  color: #d94e45;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   RIGHT PINK AUTH PANEL
+   ========================================================= */
+
+.SignUp .AuthIntroPanel {
+  position: relative;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 40px 38px;
+
+  background: linear-gradient(
+    145deg,
+    #f2265b 0%,
+    #ef2854 50%,
+    #ed3151 100%
+  );
+
+  color: #ffffff;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   RIGHT PANEL CONTENT
+   ========================================================= */
+
+.SignUp .AuthIntroPanel > * {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   WELCOME BACK
+   ========================================================= */
+
+.SignUp .AuthIntroPanel h6 {
+  margin: 0 0 18px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-family: var(--font-body, Arial, sans-serif);
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   RIGHT PANEL HEADING
+   ========================================================= */
+
+.SignUp .AuthIntroPanel h1 {
+  margin: 0 0 16px;
+
+  color: #ffffff;
+
+  font-family: var(--font-body, Arial, sans-serif);
+
+  font-size: 1.9rem;
+
+  font-weight: 800;
+
+  letter-spacing: -0.04em;
+
+  line-height: 1.1;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   RIGHT PANEL DESCRIPTION
+   ========================================================= */
+
+.SignUp .AuthIntroPanel p {
+  max-width: 285px;
+
+  margin: 0 auto 25px;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-family: var(--font-body, Arial, sans-serif);
+
+  font-size: 0.76rem;
+
+  font-weight: 400;
+
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   SIGN IN BUTTON
+   ========================================================= */
+
+.SignUp .AuthIntroPanel a,
+.SignUp .AuthIntroPanel button {
+  min-width: 112px;
+
+  height: 36px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0 22px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  border-radius: 999px;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-family: var(--font-body, Arial, sans-serif);
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.03em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.SignUp .AuthIntroPanel a:hover,
+.SignUp .AuthIntroPanel button:hover {
+  background: #ffffff;
+
+  color: #ed2854;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   DECORATIVE CIRCLES
+   ========================================================= */
+
+.SignUp .AuthIntroPanel::before {
+  content: "";
+
+  position: absolute;
+
+  width: 290px;
+  height: 290px;
+
+  right: -125px;
+  bottom: -155px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 24px rgba(255, 255, 255, 0.045),
+    0 0 0 48px rgba(255, 255, 255, 0.025);
+
+  z-index: 1;
+}
+
+
+.SignUp .AuthIntroPanel::after {
+  content: "";
+
+  position: absolute;
+
+  width: 205px;
+  height: 205px;
+
+  right: -72px;
+  bottom: -110px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 50%;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   FOOTER (sized to match Login's footer)
+   ========================================================= */
+
+.SignUp.auth-page > .Footer {
+  width: min(100%, 920px);
+
+  margin-top: 18px;
+
+  padding: 12px;
+
+  background: transparent;
+
+  border: 0;
+
+  box-shadow: none;
+
+  box-sizing: border-box;
+}
+
+
+.SignUp.auth-page > .Footer::before {
+  display: none;
+}
+
+
+.SignUp.auth-page > .Footer p {
+  margin: 0;
+
+  color: #8c9bb3;
+
+  font-family: var(--font-body, Arial, sans-serif);
+
+  font-size: 0.68rem;
+
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+  .SignUp.auth-page {
+    min-height: 100vh;
+
+    padding: 16px 12px 0;
+  }
+
+
+  .SignUp .AuthShell {
+    width: min(100%, 390px);
+
+    min-height: 0;
+
+    grid-template-columns: 1fr;
+
+    border-radius: 9px;
+  }
+
+
+  .SignUpFormPanel {
+    padding: 34px 24px 30px;
+  }
+
+
+  .SignUpFormPanel form {
+    max-width: 300px;
+  }
+
+
+  .SignUpFormPanel form input {
+    height: 42px;
+  }
+
+
+  .SignUpError {
+    max-width: 300px;
+  }
+
+
+  .SignUp .AuthIntroPanel {
+    min-height: 330px;
+
+    padding: 40px 24px;
+  }
+
+
+  .SignUp .AuthIntroPanel h1 {
+    font-size: 1.7rem;
+  }
+
+
+  .SignUp.auth-page > .Footer {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .SignUp.auth-page {
+    padding: 12px 10px 0;
+  }
+
+
+  .SignUpFormPanel {
+    padding: 30px 20px 26px;
+  }
+
+
+  .SignUpFormPanel form {
+    max-width: 280px;
+  }
+
+
+  .SignUpFormPanel form input {
+    height: 40px;
+
+    padding: 0 12px;
+  }
+
+
+  .SignUpFormPanel form button {
+    width: 124px;
+  }
+
+
+  .SignUp .AuthIntroPanel {
+    min-height: 300px;
+  }
+}

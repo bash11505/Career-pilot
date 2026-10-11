@@ -1,0 +1,107 @@
+.FlowchartPage {
+    min-height: 100vh;
+    background-color: var(--bg-primary, #07080c);
+    background-image: 
+        radial-gradient(circle at 75% 20%, rgba(220, 38, 38, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 25% 80%, rgba(249, 115, 22, 0.08) 0%, transparent 45%),
+        linear-gradient(180deg, #050608 0%, #0d0f15 100%);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    color: #f8fafc;
+}
+
+.FlowchartPage .NavBar {
+    width: 100%;
+}
+
+.FlowchartContainer {
+    flex: 0 1 1320px;
+    width: calc(100% - 48px);
+    margin: 40px auto 56px;
+    padding: 48px 36px 36px;
+    background: rgba(14, 18, 28, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16px;
+    border: 1px solid rgba(220, 38, 38, 0.35);
+    box-shadow: 0 0 35px rgba(220, 38, 38, 0.18), 0 20px 50px rgba(0, 0, 0, 0.85);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.FlowchartContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ef4444, #f97316, transparent);
+    box-shadow: 0 0 15px #ef4444;
+}
+
+.FlowchartContainer h1 {
+    margin-bottom: 20px;
+    font-family: var(--font-heading, 'Cinzel', serif);
+    font-size: 2.3rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #ffffff 30%, #fca5a5 70%, #ef4444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.FlowchartContainer p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.FlowchartFigure {
+    margin: 32px 0 0;
+}
+
+.FlowchartImage {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+.FlowchartFigure figcaption {
+    margin-top: 14px;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.FlowchartPage .Footer {
+    width: 100%;
+    margin-top: auto;
+}
+
+@media (max-width: 600px) {
+    .FlowchartContainer {
+        width: calc(100% - 24px);
+        margin: 24px auto 40px;
+        padding: 36px 16px 24px;
+    }
+
+    .FlowchartContainer h1 {
+        font-size: 1.7rem;
+    }
+
+    .FlowchartContainer p {
+        font-size: 1rem;
+    }
+
+    .FlowchartFigure {
+        margin-top: 24px;
+    }
+}

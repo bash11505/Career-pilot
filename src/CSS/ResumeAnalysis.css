@@ -1,0 +1,236 @@
+.ResumeAnalysisPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-primary, #07080c);
+  background-image: 
+    radial-gradient(circle at 15% 25%, rgba(220, 38, 38, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(249, 115, 22, 0.1) 0%, transparent 45%),
+    linear-gradient(180deg, #050608 0%, #0d0f15 100%);
+  color: #f8fafc;
+}
+
+.ResumeAnalysisContainer {
+  flex: 1;
+  max-width: 1000px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 42px 36px;
+  background: rgba(13, 16, 26, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  border: 1px solid rgba(220, 38, 38, 0.35);
+  box-shadow: 0 0 40px rgba(220, 38, 38, 0.18), 0 25px 60px rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.ResumeAnalysisContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ef4444, #f97316, transparent);
+  box-shadow: 0 0 15px #ef4444;
+}
+
+.ResumeAnalysisContainer h1 {
+  font-family: var(--font-heading, 'Cinzel', serif);
+  font-size: 2.3rem;
+  background: linear-gradient(135deg, #ffffff 30%, #fca5a5 70%, #ef4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ResumeSelector {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 36px;
+  background: rgba(20, 25, 38, 0.7);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  padding: 24px;
+  border-radius: 10px;
+}
+
+.ResumeSelector label {
+  font-family: var(--font-subheading, 'Rajdhani', sans-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ResumeSelector select {
+  width: 100%;
+  padding: 13px 18px;
+  background: rgba(14, 18, 28, 0.9);
+  border: 1px solid rgba(220, 38, 38, 0.35);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #ffffff;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.ResumeSelector select:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.4);
+}
+
+.ResumeSelector button {
+  padding: 13px 28px;
+  background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-subheading, 'Rajdhani', sans-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(220, 38, 38, 0.4);
+  transition: all 0.25s ease;
+  align-self: flex-start;
+}
+
+.ResumeSelector button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+  box-shadow: 0 6px 25px rgba(239, 68, 68, 0.7);
+  transform: translateY(-2px);
+}
+
+.ResumeSelector button:disabled {
+  background: #334155;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.AnalysisMessage {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #94a3b8;
+  padding: 24px;
+}
+
+.AnalysisError {
+  text-align: center;
+  font-size: 1rem;
+  color: #fca5a5;
+  background: rgba(220, 38, 38, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.AnalysisResult {
+  margin-top: 36px;
+  border-top: 1px solid rgba(220, 38, 38, 0.3);
+  padding-top: 28px;
+}
+
+.AnalysisResult h2 {
+  font-family: var(--font-heading, 'Cinzel', serif);
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.AnalysisResult h3 {
+  font-family: var(--font-subheading, 'Rajdhani', sans-serif);
+  font-size: 1.4rem;
+  color: #f87171;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 28px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(220, 38, 38, 0.25);
+  padding-bottom: 10px;
+}
+
+.ScoreGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.ScoreCard {
+  background: rgba(18, 22, 34, 0.85);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.25s ease;
+}
+
+.ScoreCard:hover {
+  border-color: #ef4444;
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.35);
+  transform: translateY(-3px);
+}
+
+.ScoreCard h4 {
+  margin: 0 0 8px 0;
+  font-family: var(--font-subheading, 'Rajdhani', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ScoreCard p {
+  margin: 0;
+  font-family: var(--font-heading, 'Cinzel', serif);
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 40%, #f87171 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.AnalysisSection h4 {
+  font-family: var(--font-subheading, 'Rajdhani', sans-serif);
+  font-size: 1.2rem;
+  color: #e2e8f0;
+  margin-top: 22px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.AnalysisSection p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  background: rgba(18, 22, 34, 0.75);
+  padding: 16px 20px;
+  border-left: 4px solid #ef4444;
+  border-radius: 0 8px 8px 0;
+  margin: 0 0 20px 0;
+  white-space: pre-line;
+}
+
+.ResumeAnalysisPage .Footer {
+  margin-top: auto;
+}

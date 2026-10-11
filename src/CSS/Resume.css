@@ -1,0 +1,210 @@
+.ResumePage {
+    min-height: 100vh;
+    background-color: var(--bg-primary, #07080c);
+    background-image: 
+        radial-gradient(circle at 75% 20%, rgba(220, 38, 38, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 25% 80%, rgba(249, 115, 22, 0.08) 0%, transparent 45%),
+        linear-gradient(180deg, #050608 0%, #0d0f15 100%);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.ResumePage .NavBar {
+    width: 100%;
+}
+
+.resume-container {
+    flex: 1;
+    min-width: 320px;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.resume-container h1 {
+    margin-bottom: 28px;
+    font-family: var(--font-heading, 'Cinzel', serif);
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #ffffff 30%, #fca5a5 70%, #ef4444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.resume-title {
+    width: 100%;
+    max-width: 640px;
+    padding: 14px 18px;
+    margin-bottom: 25px;
+    background: rgba(18, 22, 34, 0.8);
+    border: 1px solid rgba(220, 38, 38, 0.35);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+}
+
+.resume-title:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 18px rgba(239, 68, 68, 0.4);
+    background: rgba(24, 30, 46, 0.95);
+}
+
+.upload-box {
+    width: 100%;
+    max-width: 640px;
+    min-height: 320px;
+    border: 2px dashed rgba(220, 38, 38, 0.4);
+    border-radius: 16px;
+    background: rgba(14, 18, 28, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.upload-box:hover {
+    border-color: #ef4444;
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.3), inset 0 0 20px rgba(220, 38, 38, 0.1);
+}
+
+.upload-content {
+    width: 100%;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.upload-icon {
+    font-size: 64px;
+    color: #ef4444;
+    filter: drop-shadow(0 0 15px rgba(239, 68, 68, 0.6));
+    margin-bottom: 18px;
+    transition: transform 0.3s ease;
+}
+
+.upload-content:hover .upload-icon {
+    transform: translateY(-6px) scale(1.05);
+}
+
+.upload-content h2 {
+    margin-bottom: 10px;
+    font-family: var(--font-subheading, 'Rajdhani', sans-serif);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #f8fafc;
+    text-transform: uppercase;
+}
+
+.upload-content p {
+    margin-bottom: 10px;
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+.upload-content small {
+    margin-bottom: 22px;
+    color: #f87171;
+    font-family: var(--font-subheading, 'Rajdhani', sans-serif);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.choose-btn {
+    padding: 10px 24px;
+    border-radius: 8px;
+    background: rgba(220, 38, 38, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.6);
+    color: #ffffff;
+    font-family: var(--font-subheading, 'Rajdhani', sans-serif);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+}
+
+.choose-btn:hover {
+    background: #dc2626;
+    box-shadow: 0 0 16px rgba(220, 38, 38, 0.6);
+}
+
+.file-preview {
+    width: 100%;
+    max-width: 640px;
+    margin-top: 22px;
+    padding: 16px 20px;
+    background: rgba(18, 22, 34, 0.85);
+    border: 1px solid rgba(220, 38, 38, 0.35);
+    border-radius: 8px;
+    color: #f8fafc;
+    font-size: 0.95rem;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+}
+
+.submit-btn {
+    margin-top: 28px;
+    padding: 14px 34px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
+    color: #ffffff;
+    font-family: var(--font-subheading, 'Rajdhani', sans-serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+    box-shadow: 0 6px 28px rgba(239, 68, 68, 0.7);
+    transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+    background: #334155;
+    color: #94a3b8;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.resume-message {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: #fca5a5;
+    background: rgba(220, 38, 38, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.ResumePage .Footer {
+    width: 100%;
+    margin-top: auto;
+}

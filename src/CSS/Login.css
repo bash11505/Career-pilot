@@ -1,0 +1,240 @@
+.LoginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-primary, #07080c);
+  background-image: 
+    radial-gradient(circle at 50% 30%, rgba(220, 38, 38, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 50% 90%, rgba(249, 115, 22, 0.1) 0%, transparent 50%),
+    linear-gradient(180deg, #050608 0%, #0c0e14 100%);
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.Login {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(13, 16, 25, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 42px 36px;
+  border-radius: 14px;
+  border: 1px solid rgba(220, 38, 38, 0.35);
+  box-shadow: 0 0 35px rgba(220, 38, 38, 0.2), 0 15px 45px rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.Login::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ef4444, #f97316, transparent);
+  box-shadow: 0 0 12px #ef4444;
+}
+
+.LoginTitle {
+  font-family: var(--font-heading, 'Cinzel', serif);
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, #ffffff 30%, #fca5a5 70%, #ef4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 8px;
+  margin-bottom: 28px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.LoginForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.LoginForm label {
+  font-family: var(--font-subheading, 'Rajdhani', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.LoginForm input {
+  width: 100%;
+  padding: 13px 16px;
+  margin-bottom: 20px;
+  background: rgba(20, 24, 36, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #ffffff;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+.LoginForm input:focus {
+  outline: none;
+  border-color: #ef4444;
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.4);
+  background: rgba(26, 32, 48, 0.9);
+}
+
+.LoginForm button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-subheading, 'Rajdhani', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.LoginForm button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+  box-shadow: 0 6px 28px rgba(239, 68, 68, 0.7);
+  transform: translateY(-2px);
+}
+
+.LoginForm button:disabled {
+  background: #334155;
+  color: #94a3b8;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.LoginError {
+  color: #fca5a5;
+  background: rgba(220, 38, 38, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-top: 18px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.LoginSignup {
+  margin-top: 24px;
+  font-size: 0.95rem;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.LoginSignup a {
+  color: #f87171;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 6px;
+  transition: all 0.2s ease;
+}
+
+.LoginSignup a:hover {
+  color: #fca5a5;
+  text-shadow: 0 0 10px rgba(248, 113, 113, 0.6);
+  text-decoration: none;
+}
+
+.Login .Footer {
+  background: transparent;
+  border-top: none;
+  box-shadow: none;
+  padding: 20px 0 0;
+  margin-top: 10px;
+}
+
+.Login .Footer::before {
+  display: none;
+}
+
+/* Split auth layout */
+.LoginPage.auth-page {
+  min-height: 100vh;
+  padding: 32px 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  background-image: none;
+}
+.AuthShell {
+  width: min(100%, 920px);
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 18px 35px rgba(45, 42, 38, .18);
+  animation: authRise .55s ease both;
+}
+.auth-form-panel {
+  min-width: 0;
+  padding: 58px 58px 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+.auth-form-panel::before { display: none; }
+.AuthFormContent { width: min(100%, 315px); text-align: center; }
+.AuthKicker { margin: 0 0 12px; color: #a39e99; font: 500 .68rem var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+.LoginTitle, .SignUpFormPanel h1 { margin: 0 0 18px; color: #161515; font-size: 2rem; font-weight: 800; letter-spacing: -.05em; text-transform: none; background: none; -webkit-text-fill-color: initial; }
+.SocialLinks { display: flex; justify-content: center; gap: 10px; margin-bottom: 13px; }
+.SocialLinks button { width: 30px; height: 30px; display: grid; place-items: center; padding: 0; border: 1px solid #e2e1df; border-radius: 50%; background: #fff; color: #55514d; font-size: .72rem; font-weight: 700; }
+.SocialLinks button:hover { color: var(--accent-red); border-color: var(--accent-red); transform: translateY(-1px); }
+.SocialLinks svg { width: 13px; height: 13px; }
+.AuthHint { margin: 0 0 11px; color: #787470; font-size: .7rem; }
+.LoginForm { gap: 0; }
+.LoginForm input { height: 42px; margin-bottom: 10px; padding: 0 13px; background: #f0f0f0; border: 1px solid transparent; border-radius: 0; color: #282624; font-size: .75rem; }
+.LoginForm input:focus { background: #fafafa; border-color: #ed4e45; box-shadow: none; }
+.AuthForgot { display: block; margin: 4px 0 14px; color: #696561; font-size: .7rem; text-decoration: none; }
+.AuthForgot:hover { color: var(--accent-red); }
+.LoginForm button { width: auto; min-width: 124px; align-self: center; margin: 0; padding: 10px 24px; border-radius: 999px; background: #ed4e45; box-shadow: none; font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; }
+.LoginForm button:hover:not(:disabled) { background: #d94039; box-shadow: 0 7px 14px rgba(237, 78, 69, .2); transform: translateY(-1px); }
+.LoginError { margin-top: 15px; padding: 9px 12px; font-size: .72rem; }
+.LoginSignup, .SignUpLogin { margin: 18px 0 0; color: #77736e; font-size: .72rem; }
+.LoginSignup a, .SignUpLogin a { color: var(--accent-red); font-weight: 800; }
+.AuthWelcomePanel { position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 48px; color: #fff; background: linear-gradient(135deg, #f02f5f 0%, #ee245b 50%, #ec3d4b 100%); text-align: center; }
+.AuthWelcomePanel > div { position: relative; z-index: 1; max-width: 285px; }
+.AuthWelcomePanel .AuthKicker { color: rgba(255, 255, 255, .7); }
+.AuthWelcomePanel h2 { margin: 0 0 12px; color: #fff; font-size: 2rem; font-weight: 800; letter-spacing: -.05em; text-transform: none; }
+.AuthWelcomePanel p:not(.AuthKicker) { margin: 0 auto 24px; color: rgba(255, 255, 255, .82); font-size: .78rem; line-height: 1.6; }
+.AuthOutlineButton { display: inline-flex; min-width: 112px; justify-content: center; padding: 9px 22px; color: #fff; border: 1px solid rgba(255, 255, 255, .72); border-radius: 999px; font-size: .7rem; font-weight: 800; text-transform: uppercase; }
+.AuthOutlineButton:hover { color: #ed2456; background: #fff; transform: translateY(-1px); }
+.AuthPanelOrb { position: absolute; width: 240px; height: 240px; right: -110px; bottom: -105px; border: 1px solid rgba(255, 255, 255, .18); border-radius: 50%; box-shadow: 0 0 0 25px rgba(255, 255, 255, .04), 0 0 0 50px rgba(255, 255, 255, .025); }
+.auth-page > .Footer { width: min(100%, 920px); margin-top: 18px; padding: 12px; border: 0; }
+.auth-page > .Footer p { font-size: .68rem; }
+@keyframes authRise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 680px) {
+  .LoginPage.auth-page { padding: 18px 14px 0; }
+  .AuthShell { grid-template-columns: 1fr; min-height: 0; max-width: 430px; }
+  .auth-form-panel { padding: 42px 28px 34px; }
+  .AuthWelcomePanel { min-height: 250px; padding: 36px 28px; }
+  .AuthWelcomePanel h2 { font-size: 1.7rem; }
+}

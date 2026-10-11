@@ -1,0 +1,160 @@
+
+.AIPage {
+    min-height: 100vh;
+    background-color: var(--bg-primary, #07080c);
+    background-image: 
+        radial-gradient(circle at 80% 20%, rgba(220, 38, 38, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 20% 70%, rgba(249, 115, 22, 0.1) 0%, transparent 45%),
+        linear-gradient(180deg, #050608 0%, #0d0f15 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.AIContainer {
+    flex: 1;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 24px;
+    box-sizing: border-box;
+}
+
+.AIContainer h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: var(--font-heading, 'Cinzel', serif);
+    font-size: 2.3rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #ffffff 30%, #fca5a5 70%, #ef4444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.AIContainer > p {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+.AIContainer > div {
+    margin-bottom: 25px;
+}
+
+.AIEmptyMessage {
+    margin: 48px auto;
+    color: var(--text-secondary);
+    text-align: center;
+    font-size: 1rem;
+}
+
+.AIContainer label {
+    display: block;
+    margin-bottom: 10px;
+    color: #cbd5e1;
+    font-family: var(--font-subheading, 'Rajdhani', sans-serif);
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.AIContainer select {
+    width: 100%;
+    max-width: 500px;
+    padding: 13px 18px;
+    background: rgba(18, 22, 34, 0.8);
+    border: 1px solid rgba(220, 38, 38, 0.35);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.AIContainer select:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 16px rgba(239, 68, 68, 0.4);
+    background: rgba(24, 30, 46, 0.95);
+}
+
+.AIResumeCard {
+    margin-top: 30px;
+    padding: 36px 32px;
+    background: rgba(13, 16, 26, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16px;
+    border: 1px solid rgba(220, 38, 38, 0.35);
+    box-shadow: 0 0 35px rgba(220, 38, 38, 0.15), 0 20px 50px rgba(0, 0, 0, 0.85);
+    position: relative;
+    overflow: hidden;
+}
+
+.AIResumeCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ef4444, #f97316, transparent);
+    box-shadow: 0 0 12px #ef4444;
+}
+
+.AIResumeCard h2 {
+    margin-bottom: 12px;
+    font-family: var(--font-subheading, 'Rajdhani', sans-serif);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f8fafc;
+    letter-spacing: 0.04em;
+}
+
+.AIResumeCard h3 {
+    margin-bottom: 24px;
+    font-family: var(--font-heading, 'Cinzel', serif);
+    font-size: 1.6rem;
+    color: #f87171;
+    text-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+    letter-spacing: 0.03em;
+}
+
+.AIResumeCard p {
+    margin-bottom: 12px;
+    padding: 13px 18px;
+    background: rgba(22, 27, 40, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-left: 3px solid #ef4444;
+    border-radius: 8px;
+    color: #cbd5e1;
+    font-family: var(--font-subheading, 'Rajdhani', sans-serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    transition: all 0.2s ease;
+}
+
+.AIResumeCard p:hover {
+    background: rgba(30, 36, 54, 0.8);
+    border-color: rgba(239, 68, 68, 0.4);
+}
+
+.AIPage .Footer {
+    margin-top: auto;
+}
+
+@media (max-width: 600px) {
+    .AIContainer {
+        padding: 30px 16px;
+    }
+
+    .AIResumeCard {
+        padding: 24px 18px;
+    }
+
+    .AIContainer h1 {
+        font-size: 1.8rem;
+    }
+}
