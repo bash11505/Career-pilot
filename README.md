@@ -8,6 +8,9 @@ The project combines web development, AI integration, and data-driven insights t
 
 Preparing for placements involves multiple tasks, including resume building, interview practice, identifying skill gaps, and tracking progress. CareerPilot aims to bring these activities together through a unified, user-friendly platform.
 
+<img width="816" height="542" alt="image" src="https://github.com/user-attachments/assets/3a575f36-3c4d-437c-b79d-000c1d46c607" />
+
+
 ## Key Features
 
 - **AI Resume Analyzer** — Analyze uploaded resumes and identify areas for improvement.
